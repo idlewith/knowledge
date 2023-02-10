@@ -39,24 +39,24 @@ jobs:
           touch .nojekyll
         
       - name: upload files to OSS
-      uses: fangbinwei/aliyun-oss-website-action@master
-      with:
-          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
-          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
-          bucket: idlewith
-          endpoint: oss-cn-shenzhen.aliyuncs.com
-          # folder in /github/workspace
-          folder: docs/.vuepress/dist
-          htmlCacheControl: no-cache
-          imageCacheControl: max-age=864001
-          otherCacheControl: max-age=2592001
-          skipSetting: false
-          # not support recursive pattern **
-          exclude: |
-            CNAME
-            demo1/
-            demo2/*.md
-            demo2/*/*.md
+        uses: fangbinwei/aliyun-oss-website-action@master
+        with:
+            accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+            accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+            bucket: idlewith
+            endpoint: oss-cn-shenzhen.aliyuncs.com
+            # folder in /github/workspace
+            folder: docs/.vuepress/dist
+            htmlCacheControl: no-cache
+            imageCacheControl: max-age=864001
+            otherCacheControl: max-age=2592001
+            skipSetting: false
+            # not support recursive pattern **
+            exclude: |
+              CNAME
+              demo1/
+              demo2/*.md
+              demo2/*/*.md
 
       # run build script
       - name: Build VuePress site
