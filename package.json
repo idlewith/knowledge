@@ -1,0 +1,28 @@
+{
+  "name": "idlewith",
+  "version": "1.0.0",
+  "description": "the knowledge blog for idlewith",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [
+    "Python",
+    "Linux",
+    "shell",
+    "k8s"
+  ],
+  "author": "idlewith <newellzhou@163.com>",
+  "license": "MIT",
+  "repository": "idlewith/knowledge",
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.60",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
+    "@vuepress/plugin-search": "2.0.0-beta.60",
+    "vue": "^3.2.45",
+    "vuepress": "2.0.0-beta.60",
+    "vuepress-plugin-markmap": "^0.2.0",
+    "vuepress-plugin-md-enhance": "2.0.0-beta.169"
+  }
+}
