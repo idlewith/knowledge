@@ -7,7 +7,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:dev_github_io": "vuepress dev docs --config docs/.vuepress/config_github_io.js",
     "docs:build": "vuepress build docs",
-    "docs:build_github_io": "vuepress dev docs --config docs/.vuepress/config_github_io.js"
+    "docs:build_github_io": "vuepress build docs --config docs/.vuepress/config_github_io.js"
   },
   "keywords": [
     "Python",
