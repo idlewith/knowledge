@@ -1,0 +1,1 @@
+import{_ as t,p as n,q as a,R as e,t as s}from"./framework-96b046e1.js";const c={},i=e("h1",{id:"linux",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#linux","aria-hidden":"true"},"#"),s(" linux")],-1),o=e("p",null,"linux guide",-1),r=[i,o];function _(d,l){return n(),a("div",null,r)}const h=t(c,[["render",_],["__file","index.html.vue"]]);export{h as default};
