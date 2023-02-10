@@ -40,6 +40,15 @@ jobs:
         run: |
           pwd
           ls
+          cd docs
+          pwd
+          ls
+          cd .vuepress
+          pwd
+          ls
+          cd dist
+          pwd
+          ls
           cd docs/.vuepresss/dist
           touch .nojekyll
 
