@@ -38,6 +38,8 @@ jobs:
 
       - name: touch nojekyll
         run: |
+          pwd
+          ls
           cd docs/.vuepresss/dist
           touch .nojekyll
 
