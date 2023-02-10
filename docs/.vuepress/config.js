@@ -5,7 +5,6 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 export default defineUserConfig({
-    base: '',
     locales: {
         "/": {
             lang: 'en-US',
@@ -20,6 +19,7 @@ export default defineUserConfig({
         },
     },
     theme: defaultTheme({
+        repo: 'idlewith/knowledge',
         docsDir: 'docs',
         locales: {
             '/': {
@@ -130,6 +130,6 @@ export default defineUserConfig({
         }),
     ],
     build: {
-        chunkSizeWarningLimit: 1600,
+        chunkSizeWarningLimit: 16000,
     },
 })

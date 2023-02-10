@@ -36,6 +36,11 @@ jobs:
       - name: Build VuePress site
         run: yarn docs:build
 
+      - name: touch nojekyll
+        run: |
+          cd docs/.vuepresss/dist
+          touch .nojekyll
+
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
