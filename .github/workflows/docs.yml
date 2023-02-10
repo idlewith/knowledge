@@ -38,18 +38,7 @@ jobs:
 
       - name: touch nojekyll
         run: |
-          pwd
-          ls
-          cd docs
-          pwd
-          ls
-          cd .vuepress
-          pwd
-          ls
-          cd dist
-          pwd
-          ls
-          cd docs/.vuepresss/dist
+          cd docs/.vuepress/dist
           touch .nojekyll
 
       # please check out the docs of the workflow for more details
