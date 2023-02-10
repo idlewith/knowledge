@@ -27,26 +27,26 @@ export default defineUserConfig({
                 navbar: [
                     {
                         text: 'Python',
-                        link: "/python/"
+                        link: "python/"
                     },
                     {
                         text: 'Linux',
-                        link: "/linux/",
+                        link: "linux/",
                     },
                 ],
                 sidebar: {
-                    '/python/': [
+                    'python/': [
                         {
                             text: 'Python',
                             collapse: true,
-                            children: ['/python/index.md'],
+                            children: ['python/index.md'],
                         },
                     ],
-                    '/linux/': [
+                    'linux/': [
                         {
                             text: 'Linux',
                             collapse: true,
-                            children: ['/linux/index.md'],
+                            children: ['linux/index.md'],
                         },
                     ],
                 },
