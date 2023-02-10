@@ -17,7 +17,7 @@ jobs:
           # fetch all commits to get last updated time or other git log info
           fetch-depth: 0
 
-      - name: Setup pnpm
+      - name: Setup yarn
         uses: mskelton/setup-yarn@v1
 
       - name: Setup Node.js
@@ -25,7 +25,7 @@ jobs:
         with:
           # choose node.js version to use
           node-version: 18
-          # cache deps for pnpm
+          # cache deps for yarn
           cache: yarn
 
       # install
