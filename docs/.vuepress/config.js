@@ -5,7 +5,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 export default defineUserConfig({
-    base: '/knowledge/',
+    base: '',
     locales: {
         "/": {
             lang: 'en-US',
