@@ -37,6 +37,35 @@ jobs:
         run: |
           cd docs/.vuepress/dist
           touch .nojekyll
+        
+      - name: upload files to OSS
+      uses: fangbinwei/aliyun-oss-website-action@master
+      with:
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: idlewith
+          endpoint: oss-cn-shenzhen.aliyuncs.com
+          # folder in /github/workspace
+          folder: docs/.vuepress/dist
+          htmlCacheControl: no-cache
+          imageCacheControl: max-age=864001
+          otherCacheControl: max-age=2592001
+          skipSetting: false
+          # not support recursive pattern **
+          exclude: |
+            CNAME
+            demo1/
+            demo2/*.md
+            demo2/*/*.md
+
+      # run build script
+      - name: Build VuePress site
+        run: yarn docs:build_github_io
+
+      - name: touch nojekyll
+        run: |
+          cd docs/.vuepress/dist
+          touch .nojekyll
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -49,4 +78,4 @@ jobs:
           build_dir: docs/.vuepress/dist
         env:
           # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.ACCESS_KEY_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GIT_ACCESS_KEY_SECRET }}
